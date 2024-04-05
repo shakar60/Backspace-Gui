@@ -1,10 +1,10 @@
 local gui = Instance.new("ScreenGui")
-gui.Name = "BackSpaceGui"
+gui.Name = "BackspaceGui"
 gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 100, 0, 50)
-frame.Position = UDim2.new(0.5, -50, 0.5, -25)
+frame.Size = UDim2.new(0, 150, 0, 50) -- Adjusted size for the white part
+frame.Position = UDim2.new(0.5, -75, 0.5, -25) -- Adjusted position
 frame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 frame.BorderSizePixel = 0
 frame.Active = true
@@ -39,17 +39,17 @@ bottomFrame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 bottomFrame.BorderSizePixel = 0
 bottomFrame.Parent = frame
 
-local cButton = Instance.new("TextButton")
-cButton.Name = "BackSpaceButton"
-cButton.Size = UDim2.new(0, 50, 0, 50)
-cButton.Position = UDim2.new(0.5, -25, 0.5, -25)
-cButton.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
-cButton.Text = "BackSpace"
-cButton.Font = Enum.Font.SourceSans
-cButton.TextSize = 24
-cButton.Parent = frame
+local backspaceButton = Instance.new("TextButton") -- Renamed cButton to backspaceButton
+backspaceButton.Name = "BackspaceButton"
+backspaceButton.Size = UDim2.new(0, 120, 0, 50) -- Adjusted size for the white part
+backspaceButton.Position = UDim2.new(0.5, -60, 0.5, -25) -- Adjusted position
+backspaceButton.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
+backspaceButton.Text = "Backspace"
+backspaceButton.Font = Enum.Font.SourceSans
+backspaceButton.TextSize = 24
+backspaceButton.Parent = frame
 
-cButton.MouseButton1Click:Connect(function()
+backspaceButton.MouseButton1Click:Connect(function()
   local vim = game:GetService("VirtualInputManager")
-  vim:SendKeyEvent(true, Enum.KeyCode.BackSpace, false, game)
+  vim:SendKeyEvent(true, Enum.KeyCode.Backspace, false, game)
 end)

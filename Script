@@ -1,5 +1,5 @@
 local gui = Instance.new("ScreenGui")
-gui.Name = "BackspaceGui"
+gui.Name = "BackSpaceGui"
 gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 local frame = Instance.new("Frame")
@@ -40,16 +40,16 @@ bottomFrame.BorderSizePixel = 0
 bottomFrame.Parent = frame
 
 local cButton = Instance.new("TextButton")
-cButton.Name = "BackspaceButton"
+cButton.Name = "BackSpaceButton"
 cButton.Size = UDim2.new(0, 50, 0, 50)
 cButton.Position = UDim2.new(0.5, -25, 0.5, -25)
 cButton.BackgroundColor3 = Color3.new(0.8, 0.8, 0.8)
-cButton.Text = "Backspace"
+cButton.Text = "BackSpace"
 cButton.Font = Enum.Font.SourceSans
 cButton.TextSize = 24
 cButton.Parent = frame
 
 cButton.MouseButton1Click:Connect(function()
   local vim = game:GetService("VirtualInputManager")
-  vim:SendKeyEvent(true, Enum.KeyCode.Backspace, false, game)
+  vim:SendKeyEvent(true, Enum.KeyCode.BackSpace, false, game)
 end)

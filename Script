@@ -39,7 +39,7 @@ bottomFrame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 bottomFrame.BorderSizePixel = 0
 bottomFrame.Parent = frame
 
-local BackSpaceButton = Instance.new("TextButton")
+local cButton = Instance.new("TextButton")
 cButton.Name = "BackSpaceButton"
 cButton.Size = UDim2.new(0, 50, 0, 50)
 cButton.Position = UDim2.new(0.5, -25, 0.5, -25)
